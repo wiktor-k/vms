@@ -4,10 +4,12 @@ First create a hard disk:
 
     $ qemu-img create -f qcow2 hdd.qcow2 100G
 
-Then get the base image and convert to ISO:
+Then download the [ESP partition](https://github.com/foxlet/macOS-Simple-KVM/blob/master/ESP.qcow2?raw=true) and place it near the `hdd.qcow2` file.
+
+Get the base image and convert it to ISO:
 
     $ ./tools/FetchMacOS/fetch.sh -v 10.15
-	$ ./tools/dmg2img tools/FetchMacOS/BaseSystem/BaseSystem.dmg BaseSystem.img
+    $ ./tools/dmg2img tools/FetchMacOS/BaseSystem/BaseSystem.dmg BaseSystem.img
 
 (It is possible to download other versions of the system. See [MacOS Releases][MR].)
 
